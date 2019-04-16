@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    testApi 'junit:junit:4.12'
+    androidTestApi 'androidx.test:runner:1.1.0-alpha4'
+    androidTestApi 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    api rootProject.ext.dependencies['appcompat']
+    api rootProject.ext.dependencies['lifecycle-extensions']
+    api rootProject.ext.dependencies['recyclerview']
+    api rootProject.ext.dependencies['cardview']
+    api rootProject.ext.dependencies['multidex']
+    api rootProject.ext.dependencies['constraintlayout']
+    api rootProject.ext.dependencies['googlematerial']
+    api rootProject.ext.dependencies['litepal']
+    api rootProject.ext.dependencies['gson']
+    api rootProject.ext.dependencies['glide']
+    api rootProject.ext.dependencies['recyclerviewadapterhelper']
+    api rootProject.ext.dependencies['retrofit']
+    api rootProject.ext.dependencies['retrofit-converter-gson']
+    api rootProject.ext.dependencies['retrofit-adapter-rxjava2']
+    api rootProject.ext.dependencies['logging-interceptor']
+    api rootProject.ext.dependencies['rxjava']
+    api rootProject.ext.dependencies['rxandroid']
+    api rootProject.ext.dependencies['smartRefreshLayout']
+    api rootProject.ext.dependencies['photoview']
+}

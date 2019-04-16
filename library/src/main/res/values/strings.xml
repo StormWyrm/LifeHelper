@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">library</string>
+    <string name="empty_msg">什么也没有</string>
+    <string name="error_msg">数据加载失败</string>
+    <string name="error_detail_msg">请检查您的网络，重新加载吧</string>
+    <string name="retry_msg">重试看看</string>
+    <string name="loading_msg">加载中...</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StateView">
+        <attr name="errorImg" format="reference" />
+        <attr name="errorMsg" format="reference|string" />
+        <attr name="errorDesMsg" format="reference|string" />
+        <attr name="errorTryMsg" format="reference|string" />
+
+        <attr name="emptyImg" format="reference" />
+        <attr name="emptyMsg" format="reference|string" />
+
+        <attr name="loadingMsg" format="reference|string" />
+        <attr name="loadingColor" format="color" />
+
+        <attr name="subTextColor" format="color"/>
+        <attr name="textColor" format="color"/>
+    </declare-styleable>
+</resources>
