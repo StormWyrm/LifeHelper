@@ -1,3 +1,11 @@
+if (rootProject.ext.isPictureApplication) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
@@ -14,21 +22,32 @@ android {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
+
+        if (rootProject.ext.isPictureApplication) {
+            applicationId "com.github.StormWyrm.picture"
+        }
     }
 
+    sourceSets {
+        main {
+            if (rootProject.ext.isPictureApplication) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                resources {
+                    //正式版本时，排除alone文件夹下所有调试文件
+                    exclude 'src/main/module/*'
+                }
+            }
+        }
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
 }
 
 dependencies {
+    implementation rootProject.ext.dependencies['kotlin']
     implementation project(':library')
 }

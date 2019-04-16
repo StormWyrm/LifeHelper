@@ -12,7 +12,7 @@
         android:background="@color/colorPrimary"
         app:popupTheme="@style/Base.Widget.AppCompat.PopupMenu" />
 
-    <com.github.StormWyrm.lifehelper.library.state.StateView
+    <com.github.StormWyrm.library.state.StateView
         android:id="@+id/sv_state"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -39,6 +39,6 @@
                 android:layout_height="wrap_content" />
         </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
-    </com.github.StormWyrm.lifehelper.library.state.StateView>
+    </com.github.StormWyrm.library.state.StateView>
 
 </LinearLayout>
