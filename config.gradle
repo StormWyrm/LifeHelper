@@ -1,6 +1,6 @@
 ext {
 
-    isWeatherApplication = false //天气模块开关，false作为Lib存在，true作为Application存在
+    isWeatherApplication = true //天气模块开关，false作为Lib存在，true作为Application存在
     isPictureApplication = false //图片模块
 
     android = [
