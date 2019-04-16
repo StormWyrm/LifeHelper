@@ -1,7 +1,7 @@
 ext {
 
     isWeatherApplication = false //天气模块开关，false作为Lib存在，true作为Application存在
-    isPictureApplication = true //图片模块
+    isPictureApplication = false //图片模块
 
     android = [
             compileSdkVersion: 28,

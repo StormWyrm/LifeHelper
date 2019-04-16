@@ -54,7 +54,7 @@ class PictureActivity : BaseMvpListActivity<PictureContract.Presenter>(), Pictur
 
     private fun initRecyclerView() {
         mAdapter = MainAdapter().apply {
-            setOnItemClickListener { adapter, view, position ->
+            setOnItemClickListener { _, _, position ->
                 val gankList = data.map {
                     it.url
                 } as ArrayList<String>

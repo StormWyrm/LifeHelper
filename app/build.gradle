@@ -22,4 +22,10 @@ android {
 
 dependencies {
     implementation project(':library')
+//    if (!rootProject.ext.isWeatherApplication) {
+//        implementation project(':weather')
+//    }
+    if (!rootProject.ext.isPictureApplication) {
+        implementation project(':picture')
+    }
 }
