@@ -11,12 +11,23 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         applicationId "com.github.StormWyrm.lifehelper"
+
+        //阿里路由框架配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
     }
 }
 
@@ -28,4 +39,5 @@ dependencies {
     if (!rootProject.ext.isPictureApplication) {
         implementation project(':picture')
     }
+    annotationProcessor rootProject.ext.dependencies['arouter-compiler']
 }

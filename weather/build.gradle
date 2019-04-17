@@ -6,6 +6,7 @@ if (rootProject.ext.isWeatherApplication) {
 }
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion rootProject.ext.android['compileSdkVersion']
@@ -18,21 +19,22 @@ android {
         versionName rootProject.ext.android['versionName']
         multiDexEnabled true
 
+        kapt {
+            arguments {
+                arg('AROUTER_MODULE_NAME', project.getName())
+            }
+        }
+
         //是应用模式的时候，加上applicationId
         if (rootProject.ext.isWeatherApplication) {
             applicationId "com.github.StormWyrm.weather"
         }
 
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [AROUTER_MODULE_NAME: project.getName()]
-            }
-        }
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
     }
 
     resourcePrefix 'weather_' //防止资源名字重合
@@ -60,4 +62,5 @@ android {
 dependencies {
     implementation rootProject.ext.dependencies['kotlin']
     implementation project(':library')
+    kapt rootProject.ext.dependencies['arouter-compiler']
 }

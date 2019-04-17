@@ -12,8 +12,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
     }
 
     buildTypes {
@@ -30,7 +30,6 @@ dependencies {
     testApi rootProject.ext.dependencies['junit']
     androidTestApi rootProject.ext.dependencies['runner']
     androidTestApi rootProject.ext.dependencies['espresso-core']
-
     api rootProject.ext.dependencies['appcompat']
     api rootProject.ext.dependencies['lifecycle-extensions']
     api rootProject.ext.dependencies['recyclerview']
@@ -50,4 +49,5 @@ dependencies {
     api rootProject.ext.dependencies['rxandroid']
     api rootProject.ext.dependencies['smartRefreshLayout']
     api rootProject.ext.dependencies['photoview']
+    api rootProject.ext.dependencies['arouter-api']
 }

@@ -63,7 +63,7 @@ class WeatherActivity : BaseMvvmLoadActivity<WeatherViewModel>() {
 
     override fun dataObserver() {
         super.dataObserver()
-        LiveDataBus.getDefault().subscribe<Integer>(Constants.EVENT_KEY_WEATHER_STATE)
+        LiveDataBus.getDefault().subscribe<Int>(Constants.EVENT_KEY_WEATHER_STATE)
             .observe(this, observer)
 
         LiveDataBus.getDefault()

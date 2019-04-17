@@ -3,13 +3,16 @@ package com.github.StormWyrm.picture.main
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.bumptech.glide.Glide
+import com.github.StormWyrm.library.arounter.ARouterConstant
 import com.github.StormWyrm.library.mvp.BaseMvpListActivity
 import com.github.StormWyrm.picture.R
 import com.github.StormWyrm.picture.bean.GankFilterResult
 import com.github.StormWyrm.picture.detail.ImageDetailActivity
 import com.github.StormWyrm.picture.main.adapter.MainAdapter
 
+@Route(path = ARouterConstant.ACTIVITY_PICTURE)
 class PictureActivity : BaseMvpListActivity<PictureContract.Presenter>(), PictureContract.View {
     private var pageNum: Int = 0
     private var pageCount: Int = 20
@@ -17,7 +20,7 @@ class PictureActivity : BaseMvpListActivity<PictureContract.Presenter>(), Pictur
 
     override fun initView(savedInstanceState: Bundle?) {
         super.initView(savedInstanceState)
-        initToolbar(R.string.app_name)
+        initToolbar(R.string.picture)
         initRecyclerView()
     }
 

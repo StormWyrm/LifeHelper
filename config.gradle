@@ -1,6 +1,6 @@
 ext {
 
-    isWeatherApplication = true //天气模块开关，false作为Lib存在，true作为Application存在
+    isWeatherApplication = false //天气模块开关，false作为Lib存在，true作为Application存在
     isPictureApplication = false //图片模块
 
     android = [
@@ -31,7 +31,7 @@ ext {
             //test
             'junit'                    : 'junit:junit:4.12',
             'runner'                   : 'androidx.test:runner:1.1.0-alpha4',
-            'espresso-core'                   : 'androidx.test.espresso:espresso-core:3.1.0-alpha4',
+            'espresso-core'            : 'androidx.test.espresso:espresso-core:3.1.0-alpha4',
 
             //kotlin
             'kotlin'                   : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
@@ -61,6 +61,11 @@ ext {
             'smartRefreshHeader'       : 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-21',
 
             //photoview
-            'photoview'                : 'com.github.chrisbanes:PhotoView:2.0.0'
+            'photoview'                : 'com.github.chrisbanes:PhotoView:2.0.0',
+
+            //ARouter
+            'arouter-api'              : 'com.alibaba:arouter-api:1.4.1',
+            'arouter-compiler'         : 'com.alibaba:arouter-compiler:1.2.2',
+
     ]
 }
