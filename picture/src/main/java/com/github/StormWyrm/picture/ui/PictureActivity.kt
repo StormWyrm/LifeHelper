@@ -1,4 +1,4 @@
-package com.github.StormWyrm.picture.main
+package com.github.StormWyrm.picture.ui
 
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
@@ -10,7 +10,7 @@ import com.github.StormWyrm.library.mvp.BaseMvpListActivity
 import com.github.StormWyrm.picture.R
 import com.github.StormWyrm.picture.bean.GankFilterResult
 import com.github.StormWyrm.picture.detail.ImageDetailActivity
-import com.github.StormWyrm.picture.main.adapter.MainAdapter
+import com.github.StormWyrm.picture.ui.adapter.MainAdapter
 
 @Route(path = ARouterConstant.ACTIVITY_PICTURE)
 class PictureActivity : BaseMvpListActivity<PictureContract.Presenter>(), PictureContract.View {

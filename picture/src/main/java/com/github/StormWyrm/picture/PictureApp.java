@@ -1,7 +1,6 @@
 package com.github.StormWyrm.picture;
 
+import com.github.StormWyrm.library.util.LibApplication;
 
-import android.app.Application;
-
-public class PictureApp extends Application {
+public class PictureApp extends LibApplication {
 }

@@ -1,4 +1,4 @@
-package com.github.StormWyrm.picture.main
+package com.github.StormWyrm.picture.ui
 
 import com.github.StormWyrm.library.mvp.IListView
 import com.github.StormWyrm.library.mvp.IModel

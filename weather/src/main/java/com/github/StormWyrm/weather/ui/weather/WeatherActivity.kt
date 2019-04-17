@@ -14,7 +14,7 @@ import com.github.StormWyrm.library.mvvm.BaseMvvmLoadActivity
 import com.github.StormWyrm.weather.R
 import com.github.StormWyrm.weather.bean.place.Weather
 import com.github.StormWyrm.weather.config.Constants
-import com.github.StormWyrm.weather.ui.MainActivity
+import com.github.StormWyrm.weather.ui.ChooseAreaActivity
 import kotlinx.android.synthetic.main.activity_weather.*
 import kotlinx.android.synthetic.main.layout_weather_api.*
 import kotlinx.android.synthetic.main.layout_weather_forecast.*
@@ -47,7 +47,7 @@ class WeatherActivity : BaseMvvmLoadActivity<WeatherViewModel>() {
         } else {
             mViewModel.weatherId = intent.getStringExtra("weather_id")
             weatherLayout.visibility = View.INVISIBLE
-            mViewModel.getWeather(mViewModel.weatherId!!, MainActivity.KEY)
+            mViewModel.getWeather(mViewModel.weatherId!!, ChooseAreaActivity.KEY)
         }
         mViewModel.getBingPic()
 
@@ -87,7 +87,7 @@ class WeatherActivity : BaseMvvmLoadActivity<WeatherViewModel>() {
     }
 
     fun refreshWeather(weatherId : String){
-        mViewModel.refreshWeather(weatherId, MainActivity.KEY)
+        mViewModel.refreshWeather(weatherId, ChooseAreaActivity.KEY)
     }
 
     private fun showWeatherInfo(weather: Weather) {

@@ -1,4 +1,4 @@
-package com.github.StormWyrm.picture.main.adapter
+package com.github.StormWyrm.picture.ui.adapter
 
 import com.bumptech.glide.Glide
 import com.chad.library.adapter.base.BaseQuickAdapter

@@ -13,7 +13,7 @@ import com.github.StormWyrm.weather.ui.weather.WeatherActivity
 import com.github.StormWyrm.weather.ui.weather.WeatherViewModel
 
 @Route(path = ARouterConstant.ACTIVITY_WEATHER)
-class MainActivity : BaseActivity() {
+class ChooseAreaActivity : BaseActivity() {
 
     override fun getLayoutId(): Int = R.layout.activity_main
 

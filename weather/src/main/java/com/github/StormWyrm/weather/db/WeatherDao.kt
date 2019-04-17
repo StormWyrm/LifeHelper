@@ -2,6 +2,7 @@ package com.github.StormWyrm.weather.db
 
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
+import com.github.StormWyrm.library.util.LibApplication
 import com.github.StormWyrm.weather.CoolWeatherApp
 import com.github.StormWyrm.weather.bean.place.Weather
 import com.google.gson.Gson
@@ -10,7 +11,7 @@ class WeatherDao {
 
     fun cacheWeatherInfo(weather: Weather?) {
         if (weather == null) return
-        PreferenceManager.getDefaultSharedPreferences(CoolWeatherApp.context).edit {
+        PreferenceManager.getDefaultSharedPreferences(LibApplication.getContext()).edit {
             val weatherInfo = Gson().toJson(weather)
             putString("weather", weatherInfo)
         }
@@ -18,7 +19,7 @@ class WeatherDao {
 
     fun getCachedWeatherInfo(): Weather? {
         val weatherInfo =
-            PreferenceManager.getDefaultSharedPreferences(CoolWeatherApp.context).getString("weather", null)
+                PreferenceManager.getDefaultSharedPreferences(LibApplication.getContext()).getString("weather", null)
         if (weatherInfo != null) {
             return Gson().fromJson(weatherInfo, Weather::class.java)
         }
@@ -27,14 +28,14 @@ class WeatherDao {
 
     fun cacheBingPic(bingPic: String?) {
         if (bingPic == null) return
-        PreferenceManager.getDefaultSharedPreferences(CoolWeatherApp.context)
-            .edit {
-                putString("bing_pic", bingPic)
-            }
+        PreferenceManager.getDefaultSharedPreferences(LibApplication.getContext())
+                .edit {
+                    putString("bing_pic", bingPic)
+                }
     }
 
     fun getCachedBingPic(): String? =
-        PreferenceManager.getDefaultSharedPreferences(CoolWeatherApp.context).getString("bing_pic", null)
+            PreferenceManager.getDefaultSharedPreferences(LibApplication.getContext()).getString("bing_pic", null)
 
     private fun SharedPreferences.edit(action: SharedPreferences.Editor.() -> Unit) {
         val editor = edit()

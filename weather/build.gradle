@@ -29,7 +29,7 @@ android {
         if (rootProject.ext.isWeatherApplication) {
             applicationId "com.github.StormWyrm.weather"
         }
-
+//        multiDexEnabled true
     }
 
     compileOptions {

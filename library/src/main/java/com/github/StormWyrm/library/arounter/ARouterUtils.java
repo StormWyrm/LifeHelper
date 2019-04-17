@@ -4,8 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.util.Log;
 
+import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.callback.NavigationCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
 
@@ -13,7 +14,29 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class ARouterUtil {
+public class ARouterUtils {
+    private static final String TAG = "ARouterUtils";
+    public static NavigationCallback callback = new NavigationCallback() {
+        @Override
+        public void onFound(Postcard postcard) {
+            Log.d(TAG, "onFound: "+postcard);
+        }
+
+        @Override
+        public void onLost(Postcard postcard) {
+            Log.d(TAG, "onLost: "+postcard);
+        }
+
+        @Override
+        public void onArrival(Postcard postcard) {
+            Log.d(TAG, "onArrival: "+postcard);
+        }
+
+        @Override
+        public void onInterrupt(Postcard postcard) {
+            Log.d(TAG, "onInterrupt: "+postcard);
+        }
+    };
 
     public static void navigation(@Nullable Uri uri) {
         ARouter.getInstance()
@@ -21,10 +44,16 @@ public class ARouterUtil {
                 .navigation();
     }
 
-    public static void navigation(@NonNull String path) {
+    public static void navigation(@NonNull String path){
         ARouter.getInstance()
                 .build(path)
                 .navigation();
+    }
+
+    public static void navigation(@NonNull String path,@Nullable Context context) {
+        ARouter.getInstance()
+                .build(path)
+                .navigation(context);
     }
 
 

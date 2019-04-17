@@ -1,4 +1,4 @@
-package com.github.StormWyrm.picture.main
+package com.github.StormWyrm.picture.ui
 
 import com.github.StormWyrm.library.network.RetrofitUtils
 import com.github.StormWyrm.library.rx.convert.ExceptionConvert

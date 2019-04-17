@@ -3,7 +3,7 @@
     package="com.github.StormWyrm.picture">
 
     <application>
-        <activity android:name=".main.PictureActivity" />
+        <activity android:name=".ui.PictureActivity" />
         <activity android:name=".detail.ImageDetailActivity" />
     </application>
 </manifest>

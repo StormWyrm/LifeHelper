@@ -27,6 +27,7 @@ android {
         if (rootProject.ext.isPictureApplication) {
             applicationId "com.github.StormWyrm.picture"
         }
+//        multiDexEnabled true
     }
 
     sourceSets {

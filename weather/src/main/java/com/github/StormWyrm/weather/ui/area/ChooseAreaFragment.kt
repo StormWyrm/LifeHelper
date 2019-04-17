@@ -14,7 +14,7 @@ import com.github.StormWyrm.weather.bean.place.City
 import com.github.StormWyrm.weather.bean.place.County
 import com.github.StormWyrm.weather.bean.place.Province
 import com.github.StormWyrm.weather.config.Constants
-import com.github.StormWyrm.weather.ui.MainActivity
+import com.github.StormWyrm.weather.ui.ChooseAreaActivity
 import com.github.StormWyrm.weather.ui.area.adapter.ChooseAreaAdapter
 import com.github.StormWyrm.weather.ui.weather.WeatherActivity
 import kotlinx.android.synthetic.main.activity_weather.*
@@ -47,7 +47,7 @@ class ChooseAreaFragment : BaseMvvmLoadFragment<ChooseAreaViewModel>() {
                     }
                     mViewModel.currentLevel == LEVEL_COUNTY -> {
                         val weatherId = mViewModel.countyList!![position].weatherId
-                        if (mActivity is MainActivity) {
+                        if (mActivity is ChooseAreaActivity) {
                             val intent = Intent(activity, WeatherActivity::class.java)
                             intent.putExtra("weather_id", weatherId)
                             startActivity(intent)

@@ -34,7 +34,7 @@ ext {
             'espresso-core'            : 'androidx.test.espresso:espresso-core:3.1.0-alpha4',
 
             //kotlin
-            'kotlin'                   : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            'kotlin'                   : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
 
             //litepal
             'litepal'                  : 'org.litepal.android:kotlin:3.0.0',
