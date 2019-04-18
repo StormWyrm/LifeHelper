@@ -34,15 +34,15 @@
                     android:fitsSystemWindows="true"
                     android:orientation="vertical">
 
-                    <include layout="@layout/layout_weather_title" />
+                    <include layout="@layout/weather_layout_weather_title" />
 
-                    <include layout="@layout/layout_weather_now" />
+                    <include layout="@layout/weather_layout_weather_now" />
 
-                    <include layout="@layout/layout_weather_forecast" />
+                    <include layout="@layout/weather_layout_weather_forecast" />
 
-                    <include layout="@layout/layout_weather_api" />
+                    <include layout="@layout/weather_layout_weather_api" />
 
-                    <include layout="@layout/layout_weather_suggestion" />
+                    <include layout="@layout/weather_layout_weather_suggestion" />
 
                 </LinearLayout>
 

@@ -14,11 +14,10 @@ import com.github.StormWyrm.weather.bean.place.City
 import com.github.StormWyrm.weather.bean.place.County
 import com.github.StormWyrm.weather.bean.place.Province
 import com.github.StormWyrm.weather.config.Constants
-import com.github.StormWyrm.weather.ui.ChooseAreaActivity
 import com.github.StormWyrm.weather.ui.area.adapter.ChooseAreaAdapter
 import com.github.StormWyrm.weather.ui.weather.WeatherActivity
-import kotlinx.android.synthetic.main.activity_weather.*
-import kotlinx.android.synthetic.main.fragment_choose_area.*
+import kotlinx.android.synthetic.main.weather_activity_weather.*
+import kotlinx.android.synthetic.main.weather_fragment_choose_area.*
 
 class ChooseAreaFragment : BaseMvvmLoadFragment<ChooseAreaViewModel>() {
     private lateinit var mAdapter: ChooseAreaAdapter
@@ -27,7 +26,7 @@ class ChooseAreaFragment : BaseMvvmLoadFragment<ChooseAreaViewModel>() {
 
     override fun getStateEventKey(): Any = Constants.EVENT_KEY_CHOOSE_AREA_STATE
 
-    override fun getChildLayoutId(): Int = R.layout.fragment_choose_area
+    override fun getChildLayoutId(): Int = R.layout.weather_fragment_choose_area
 
     override fun initView(savedInstanceState: Bundle?) {
         super.initView(savedInstanceState)

@@ -1,1 +1,1 @@
-include ':app', ':library', ':picture', ':weather'
+include ':app', ':library', ':picture', ':weather', ':gank'

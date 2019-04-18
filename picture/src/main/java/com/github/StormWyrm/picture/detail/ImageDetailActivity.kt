@@ -6,14 +6,14 @@ import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import com.github.StormWyrm.library.base.activity.BaseActivity
 import com.github.StormWyrm.picture.R
-import kotlinx.android.synthetic.main.weather_activity_image_detail.*
+import kotlinx.android.synthetic.main.picture_activity_image_detail.*
 
 class ImageDetailActivity : BaseActivity() {
     private var gankIndex: Int = 0
     private lateinit var gankList: ArrayList<String>
 
     override fun getLayoutId(): Int {
-        return R.layout.weather_activity_image_detail
+        return R.layout.picture_activity_image_detail
     }
 
     override fun initView(savedInstanceState: Bundle?) {

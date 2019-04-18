@@ -2,7 +2,7 @@
     package="com.github.StormWyrm.weather">
 
     <application>
-        <activity android:name=".ui.ChooseAreaActivity"/>
+        <activity android:name=".ui.area.ChooseAreaActivity"/>
         <activity android:name=".ui.weather.WeatherActivity"/>
     </application>
 

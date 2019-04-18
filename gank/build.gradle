@@ -1,4 +1,4 @@
-if (rootProject.ext.isPictureApplication) {
+if (rootProject.ext.isGankApplication) {
     apply plugin: 'com.android.application'
 } else {
     apply plugin: 'com.android.library'
@@ -17,6 +17,7 @@ android {
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
         //阿里路由框架配置
         kapt {
             arguments {
@@ -24,20 +25,19 @@ android {
             }
         }
 
-        if (rootProject.ext.isPictureApplication) {
-            applicationId "com.github.StormWyrm.picture"
+        if (rootProject.ext.isGankApplication) {
+            applicationId "com.github.StormWyrm.gank"
         }
-//        multiDexEnabled true
     }
 
-    resourcePrefix 'picture_'
+    resourcePrefix 'gank_' //防止资源名字重合
 
     sourceSets {
         main {
-            if (rootProject.ext.isPictureApplication) {
-                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            if (rootProject.ext.isGankApplication) {
+                manifest.srcFile '/src/main/moudle/AndroidManifest.xml'
             } else {
-                manifest.srcFile 'src/main/AndroidManifest.xml'
+                manifest.srcFile '/src/main/AndroidManifest.xml'
                 resources {
                     //正式版本时，排除alone文件夹下所有调试文件
                     exclude 'src/main/module/*'
@@ -45,6 +45,14 @@ android {
             }
         }
     }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
 }
 
 dependencies {

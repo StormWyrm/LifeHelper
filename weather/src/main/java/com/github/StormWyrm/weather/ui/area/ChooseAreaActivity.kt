@@ -1,4 +1,4 @@
-package com.github.StormWyrm.weather.ui
+package com.github.StormWyrm.weather.ui.area
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -15,15 +15,15 @@ import com.github.StormWyrm.weather.ui.weather.WeatherViewModel
 @Route(path = ARouterConstant.ACTIVITY_WEATHER)
 class ChooseAreaActivity : BaseActivity() {
 
-    override fun getLayoutId(): Int = R.layout.activity_main
+    override fun getLayoutId(): Int = R.layout.weather_activity_main
 
     override fun initView(savedInstanceState: Bundle?) {
         super.initView(savedInstanceState)
         if (KEY.isNullOrEmpty()) {
             AlertDialog.Builder(this)
-                    .setTitle(R.string.dialog_title)
-                    .setTitle(R.string.dialog_content)
-                    .setPositiveButton(R.string.dialog_ok) { dialogInterface: DialogInterface, _: Int ->
+                    .setTitle(R.string.weather_dialog_title)
+                    .setMessage(R.string.weather_dialog_message)
+                    .setPositiveButton(R.string.weather_dialog_confirm) { dialogInterface: DialogInterface, _: Int ->
                         dialogInterface.dismiss()
                     }
                     .create()
@@ -34,6 +34,7 @@ class ChooseAreaActivity : BaseActivity() {
             if (weatherCached) {
                 val intent = Intent(this, WeatherActivity::class.java)
                 startActivity(intent)
+                finish()
             }
         }
     }

@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">weather</string>
-    <string name="dialog_title">操作提示</string>
-    <string name="dialog_content">请配置天气API的key</string>
-    <string name="dialog_ok">确定</string>
+    <string name="weather_app_name">Weather</string>
+    <string name="weather_dialog_title">操作提示</string>
+    <string name="weather_dialog_message">请配置天气API的key</string>
+    <string name="weather_dialog_confirm">确定</string>
+    <string name="weather_dialog_cancle">取消</string>
     <string name="weather_forecast">预报</string>
     <string name="weather_aqi">AQI 指数</string>
     <string name="weather_pm25">PM2.5 指数</string>
-    <string name="suggest">生活建议</string>
+    <string name="weather_suggest">生活建议</string>
 </resources>

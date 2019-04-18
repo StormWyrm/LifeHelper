@@ -6,7 +6,7 @@ import com.chad.library.adapter.base.BaseViewHolder
 import com.github.StormWyrm.picture.R
 import com.github.StormWyrm.picture.bean.GankFilterResult
 
-class MainAdapter : BaseQuickAdapter<GankFilterResult, BaseViewHolder>(R.layout.weather_item_main) {
+class MainAdapter : BaseQuickAdapter<GankFilterResult, BaseViewHolder>(R.layout.picture_item_main) {
     init {
         openLoadAnimation()
     }
@@ -15,8 +15,8 @@ class MainAdapter : BaseQuickAdapter<GankFilterResult, BaseViewHolder>(R.layout.
         Glide.with(mContext)
             .load(item.url)
             .asBitmap()
-            .error(R.drawable.img_default_meizi)
-            .placeholder(R.drawable.img_default_meizi)
+            .error(R.drawable.picture_img_default_meizi)
+            .placeholder(R.drawable.picture_img_default_meizi)
             .centerCrop()
             .into(helper.getView(R.id.iv_image))
     }

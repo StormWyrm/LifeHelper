@@ -14,13 +14,13 @@ import com.github.StormWyrm.library.mvvm.BaseMvvmLoadActivity
 import com.github.StormWyrm.weather.R
 import com.github.StormWyrm.weather.bean.place.Weather
 import com.github.StormWyrm.weather.config.Constants
-import com.github.StormWyrm.weather.ui.ChooseAreaActivity
-import kotlinx.android.synthetic.main.activity_weather.*
-import kotlinx.android.synthetic.main.layout_weather_api.*
-import kotlinx.android.synthetic.main.layout_weather_forecast.*
-import kotlinx.android.synthetic.main.layout_weather_now.*
-import kotlinx.android.synthetic.main.layout_weather_suggestion.*
-import kotlinx.android.synthetic.main.layout_weather_title.*
+import com.github.StormWyrm.weather.ui.area.ChooseAreaActivity
+import kotlinx.android.synthetic.main.weather_activity_weather.*
+import kotlinx.android.synthetic.main.weather_layout_weather_api.*
+import kotlinx.android.synthetic.main.weather_layout_weather_forecast.*
+import kotlinx.android.synthetic.main.weather_layout_weather_now.*
+import kotlinx.android.synthetic.main.weather_layout_weather_suggestion.*
+import kotlinx.android.synthetic.main.weather_layout_weather_title.*
 
 class WeatherActivity : BaseMvvmLoadActivity<WeatherViewModel>() {
 
@@ -34,7 +34,7 @@ class WeatherActivity : BaseMvvmLoadActivity<WeatherViewModel>() {
     }
 
     override fun getChildLayoutId(): Int {
-        return R.layout.activity_weather
+        return R.layout.weather_activity_weather
     }
 
     override fun initView(savedInstanceState: Bundle?) {
@@ -104,7 +104,7 @@ class WeatherActivity : BaseMvvmLoadActivity<WeatherViewModel>() {
         tvWeatherInfoText.text = weatherInfo
         llForecast.removeAllViews()
         for (forecast in weather.forecastList) {
-            val view = LayoutInflater.from(this).inflate(R.layout.forecast_item, llForecast, false)
+            val view = LayoutInflater.from(this).inflate(R.layout.weather_forecast_item, llForecast, false)
             val dateText = view.findViewById(R.id.tvDateText) as TextView
             val infoText = view.findViewById(R.id.tvInfoText) as TextView
             val maxText = view.findViewById(R.id.tvMaxText) as TextView

@@ -30,8 +30,8 @@ class ImageDetailAdapter(val imageList: ArrayList<String>) : PagerAdapter() {
                 .load(imageList[position])
                 .asBitmap()
                 .centerCrop()
-                .placeholder(R.drawable.img_default_meizi)
-                .error(R.drawable.img_default_meizi)
+                .placeholder(R.drawable.picture_img_default_meizi)
+                .error(R.drawable.picture_img_default_meizi)
                 .into(this)
             container.addView(this)
         }

@@ -20,6 +20,9 @@ android {
         }
         multiDexEnabled true
     }
+
+    resourcePrefix 'app_'
+
     buildTypes {
         release {
             minifyEnabled false
@@ -34,6 +37,9 @@ dependencies {
     }
     if (!rootProject.ext.isPictureApplication) {
         implementation project(':picture')
+    }
+    if (!rootProject.ext.isGankApplication) {
+        implementation project(':gank')
     }
     implementation project(':library')
     annotationProcessor rootProject.ext.dependencies['arouter-compiler']

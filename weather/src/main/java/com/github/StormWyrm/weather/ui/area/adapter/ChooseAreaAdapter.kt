@@ -4,7 +4,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.github.StormWyrm.weather.R
 
-class ChooseAreaAdapter : BaseQuickAdapter<String, BaseViewHolder>(R.layout.item_city, null) {
+class ChooseAreaAdapter : BaseQuickAdapter<String, BaseViewHolder>(R.layout.weather_item_city, null) {
     override fun convert(helper: BaseViewHolder?, item: String?) {
         helper?.run {
             item?.let {

@@ -20,7 +20,7 @@ class PictureActivity : BaseMvpListActivity<PictureContract.Presenter>(), Pictur
 
     override fun initView(savedInstanceState: Bundle?) {
         super.initView(savedInstanceState)
-        initToolbar(R.string.picture)
+        initToolbar(R.string.picture_app_name)
         initRecyclerView()
     }
 
@@ -61,7 +61,7 @@ class PictureActivity : BaseMvpListActivity<PictureContract.Presenter>(), Pictur
                 val gankList = data.map {
                     it.url
                 } as ArrayList<String>
-                ImageDetailActivity.start(mContext, position,gankList)
+                ImageDetailActivity.start(mContext, position, gankList)
             }
         }
         mRecyclerView.run {
