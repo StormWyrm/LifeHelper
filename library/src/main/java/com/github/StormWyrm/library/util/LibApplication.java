@@ -13,7 +13,7 @@ import com.github.StormWyrm.library.arounter.ARouterUtils;
 import org.litepal.LitePal;
 
 public class LibApplication extends Application {
-    private static Context applicationContext;
+    private static Application applicationContext;
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -58,7 +58,7 @@ public class LibApplication extends Application {
         Glide.get(this).clearMemory();
     }
 
-    public static Context getContext() {
+    public static Application getContext() {
         return applicationContext;
     }
 }

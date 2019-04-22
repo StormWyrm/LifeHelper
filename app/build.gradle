@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
@@ -13,12 +15,17 @@ android {
         applicationId "com.github.StormWyrm.lifehelper"
 
         //阿里路由框架配置
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [AROUTER_MODULE_NAME: project.getName()]
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
             }
         }
+
         multiDexEnabled true
+
+        dataBinding {
+            enabled = true
+        }
     }
 
     resourcePrefix 'app_'
@@ -41,6 +48,7 @@ dependencies {
     if (!rootProject.ext.isGankApplication) {
         implementation project(':gank')
     }
+    implementation rootProject.ext.dependencies['kotlin']
     implementation project(':library')
-    annotationProcessor rootProject.ext.dependencies['arouter-compiler']
+    kapt rootProject.ext.dependencies['arouter-compiler']
 }

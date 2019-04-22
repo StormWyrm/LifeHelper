@@ -1,3 +1,11 @@
 <resources>
     <string name="gank_app_name">gank</string>
+    <string name="gank_date_range">今日干货</string>
+    <string name="gank_navi_android">Android</string>
+    <string name="gank_navi_ios">Ios</string>
+    <string name="gank_navi_app">App</string>
+    <string name="gank_navi_web">前端</string>
+    <string name="gank_navi_extra_source">扩展资源</string>
+    <string name="gank_navi_welfare">福利</string>
+    <string name="gank_navi_about">关于</string>
 </resources>

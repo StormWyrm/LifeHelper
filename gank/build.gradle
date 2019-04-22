@@ -28,6 +28,10 @@ android {
         if (rootProject.ext.isGankApplication) {
             applicationId "com.github.StormWyrm.gank"
         }
+
+        dataBinding {
+            enabled = true
+        }
     }
 
     resourcePrefix 'gank_' //防止资源名字重合

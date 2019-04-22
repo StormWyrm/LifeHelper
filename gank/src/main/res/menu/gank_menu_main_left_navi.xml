@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_navi_today"
+            android:checked="true"
+            android:icon="@drawable/gank_ic_date_range_black_24dp"
+            android:title="@string/gank_date_range" />
+        <item
+            android:id="@+id/menu_navi_android"
+            android:icon="@drawable/gank_ic_android_black_24dp"
+            android:title="@string/gank_navi_android" />
+
+        <item
+            android:id="@+id/menu_navi_ios"
+            android:icon="@drawable/gank_ic_apple_black"
+            android:title="@string/gank_navi_ios" />
+        <item
+            android:id="@+id/menu_navi_app"
+            android:icon="@drawable/gank_ic_app_black_24dp"
+            android:title="@string/gank_navi_app" />
+        <item
+            android:id="@+id/menu_navi_web"
+            android:icon="@drawable/gank_ic_web_black_24dp"
+            android:title="@string/gank_navi_web" />
+
+        <item
+            android:id="@+id/menu_navi_extra"
+            android:icon="@drawable/gank_ic_extra_sources_black_24dp"
+            android:title="@string/gank_navi_extra_source" />
+
+        <item
+            android:id="@+id/menu_navi_welfare"
+            android:icon="@drawable/gank_ic_filter_vintage_black_24dp"
+            android:title="@string/gank_navi_welfare" />
+    </group>
+    <item android:title="@string/gank_navi_about">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/menu_navi_about"
+                    android:icon="@drawable/gank_ic_info_black_24dp"
+                    android:title="@string/gank_navi_about" />
+            </group>
+        </menu>
+    </item>
+</menu>

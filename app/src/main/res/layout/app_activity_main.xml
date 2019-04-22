@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn_picture"
+        android:id="@+id/btnPicture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="进入图片模块"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_weather"
+        android:id="@+id/btnWeather"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="进入天气模块"
@@ -29,7 +29,7 @@
         app:layout_constraintVertical_bias="0.582" />
 
     <Button
-        android:id="@+id/btn_gank"
+        android:id="@+id/btnGank"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="进入Gank模块"
