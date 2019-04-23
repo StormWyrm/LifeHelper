@@ -1,4 +1,4 @@
-package com.github.stormwyrm.gank.ui.daily
+package com.github.stormwyrm.gank.daily
 
 import com.github.stormwyrm.library.mvvm.AbsRepository
 
