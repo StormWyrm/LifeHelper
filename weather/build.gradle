@@ -27,15 +27,16 @@ android {
 
         //是应用模式的时候，加上applicationId
         if (rootProject.ext.isWeatherApplication) {
-            applicationId "com.github.StormWyrm.weather"
+            applicationId "com.github.stormwyrm.weather"
         }
 //        multiDexEnabled true
-        dataBinding {
-            enabled = true
-        }
     }
 
     resourcePrefix 'weather_' //防止资源名字重合
+
+    dataBinding {
+        enabled = true
+    }
 
     sourceSets {
         //设置Lib和Applicatioin中各自的manifests

@@ -2,7 +2,7 @@
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/chooseAreaFragment"
-    android:name="com.github.StormWyrm.weather.ui.area.ChooseAreaFragment"
+    android:name="com.github.stormwyrm.weather.ui.area.ChooseAreaFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:ignore="ResourceName" />

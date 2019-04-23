@@ -25,15 +25,16 @@ android {
         }
 
         if (rootProject.ext.isPictureApplication) {
-            applicationId "com.github.StormWyrm.picture"
+            applicationId "com.github.stormwyrm.picture"
         }
 //        multiDexEnabled true
-        dataBinding {
-            enabled = true
-        }
     }
 
     resourcePrefix 'picture_'
+
+    dataBinding {
+        enabled = true
+    }
 
     sourceSets {
         main {

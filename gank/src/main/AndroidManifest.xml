@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.StormWyrm.gank" >
+    package="com.github.stormwyrm.gank" >
     <application>
-        <activity android:name=".ui.GankActivity"/>
+        <activity android:name="com.github.stormwyrm.gank.ui.GankActivity"/>
     </application>
 </manifest>

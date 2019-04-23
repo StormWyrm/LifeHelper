@@ -12,7 +12,7 @@ android {
         versionName rootProject.ext.android.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        applicationId "com.github.StormWyrm.lifehelper"
+        applicationId "com.github.stormwyrm.lifehelper"
 
         //阿里路由框架配置
         kapt {
@@ -23,12 +23,13 @@ android {
 
         multiDexEnabled true
 
-        dataBinding {
-            enabled = true
-        }
     }
 
     resourcePrefix 'app_'
+
+    dataBinding {
+        enabled = true
+    }
 
     buildTypes {
         release {

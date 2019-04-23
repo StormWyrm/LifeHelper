@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.StormWyrm.library">
+    package="com.github.stormwyrm.library">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

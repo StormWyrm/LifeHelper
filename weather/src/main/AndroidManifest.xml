@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.StormWyrm.weather">
+    package="com.github.stormwyrm.weather">
 
     <application>
-        <activity android:name=".ui.area.ChooseAreaActivity"/>
-        <activity android:name=".ui.weather.WeatherActivity"/>
+        <activity android:name="com.github.stormwyrm.weather.ui.area.ChooseAreaActivity"/>
+        <activity android:name="com.github.stormwyrm.weather.ui.weather.WeatherActivity"/>
     </application>
 
 </manifest>
