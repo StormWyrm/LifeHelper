@@ -1,4 +1,4 @@
-package com.github.stormwyrm.gank.daily.adapter
+package com.github.stormwyrm.gank.ui.daily.adapter
 
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder

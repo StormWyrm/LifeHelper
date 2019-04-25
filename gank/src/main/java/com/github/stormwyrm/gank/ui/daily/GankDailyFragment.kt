@@ -1,19 +1,18 @@
-package com.github.stormwyrm.gank.daily
+package com.github.stormwyrm.gank.ui.daily
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import com.chad.library.adapter.base.BaseQuickAdapter
 import com.github.stormwyrm.gank.R
-import com.github.stormwyrm.gank.daily.adapter.GankDailyAdapter
+import com.github.stormwyrm.gank.ui.daily.adapter.GankDailyAdapter
 import com.github.stormwyrm.gank.databinding.GankFragmentDailyBinding
 import com.github.stormwyrm.library.mvvm.BaseMvvmFragment
 
 class GankDailyFragment : BaseMvvmFragment<GankDailyViewModel>() {
     private lateinit var databinding: GankFragmentDailyBinding
-    private lateinit var madapter : GankDailyAdapter
+    private lateinit var madapter: GankDailyAdapter
 
     override fun getLayoutId(): Int {
         return R.layout.gank_fragment_daily
@@ -33,5 +32,11 @@ class GankDailyFragment : BaseMvvmFragment<GankDailyViewModel>() {
         databinding.rvGankDaily.apply {
 
         }
+    }
+
+    companion object {
+        val TAG: String = GankDailyFragment::class.java.name
+
+        fun newInstance() = GankDailyFragment()
     }
 }

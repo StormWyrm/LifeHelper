@@ -1,4 +1,4 @@
-package com.github.stormwyrm.gank.filter
+package com.github.stormwyrm.gank.ui.filter
 
 import com.github.stormwyrm.library.mvvm.AbsViewModel
 

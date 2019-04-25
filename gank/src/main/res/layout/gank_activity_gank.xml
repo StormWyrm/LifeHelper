@@ -16,12 +16,14 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
             android:background="@color/colorPrimary"
             android:fitsSystemWindows="true"
+            android:clipToPadding="true"
             app:popupTheme="@style/Widget.AppCompat.PopupMenu" />
 
         <FrameLayout
-            android:id="@+id/fl_container"
+            android:id="@+id/flContainer"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1" />
